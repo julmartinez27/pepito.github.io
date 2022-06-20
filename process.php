@@ -17,7 +17,7 @@ if (!file_exists($nombre_fichero)) {
 if (filesize($nombre_fichero) == 0){
   $vacio = false;
 }else{
-  $file = fopen($nombre_fichero, "r")  || ("Error abriendo fichero!");
+  $file = fopen($nombre_fichero, "r")  or ("Error abriendo fichero!");
   $linea = fgets($file);
   $terminal =  explode("_", $linea);
   $mid = trim($terminal[0]);
@@ -46,9 +46,12 @@ $_SESSION['merchterm'] = $merchterm;
 
 
 
-function request($items, $total,$iva,$totaTarifa12,$totalBase0,$email, $primer_nombre, $segundo_nombre, $apellido, $cedula, $trx,$ip_address, $finger,$merchterm,
-	$telefono, $direccion_cliente, $pais_cliente, $direccion_entrega, $pais_entrega) {
-	$finger = urlencode($finger);
+function request($items, $total,$iva,$totaTarifa12,$totalBase0,$email);
+	
+function request($primer_nombre, $segundo_nombre, $apellido, $cedula, $trx,$ip_address, $finger,$merchterm);
+function request($telefono, $direccion_cliente, $pais_cliente, $direccion_entrega, $pais_entrega) {
+	$finger = urlencode($finger));
+	
 	$i = 0;
 	$url = "https://test.oppwa.com/v1/checkouts";
 	$iva 			=  str_replace('.', '', $iva); 
@@ -170,7 +173,7 @@ $json = json_decode($responseData, true);
 		<!-- <img src="../imagenes/marcas.png"> -->
 		</div>
 	</div>
-	<p>Powered by <a href="http://www.datafast.com.ec/" target="_blank">Datafast</a></p>	
+	<p>Powered by <a href="https://www.datafast.com.ec/" target="_blank">Datafast</a></p>	
 	</div>
 </div>
 </body>
