@@ -169,7 +169,7 @@ $json = json_decode($responseData, true);
 <div class="container">
 	<div class="row">
 		<div class="col-md-12">
-			<img src= "https://www.datafast.com.ec/images/logo.png">
+			<img src= "https://www.datafast.com.ec/images/logo.png" alt="This is a meaningful image description">
 		</div>
 		<div class="col-md-12">
 		<h1>Portal de compras</h1>
